@@ -1,0 +1,19 @@
+# Example Terraform variables for the bootstrap module
+#
+# IMPORTANT:
+# `aws_region` and `project_name` defined here are the
+# canonical values for the entire project.
+#
+# All environment modules (dev, stage, prod) must use
+# identical values for these variables.
+
+
+aws_region          = "us-east-1"
+
+project_name        = "ecs-fargate-platform"
+
+# Base name (a random suffix will be added automatically)
+bucket_name         = "tf-state-ecs-fargate"
+
+# DynamoDB table for state locking
+dynamodb_table_name = "tf-locks-ecs-fargate"

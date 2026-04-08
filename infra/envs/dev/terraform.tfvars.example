@@ -1,0 +1,18 @@
+# Example Terraform variables for the dev environment.
+#
+# IMPORTANT:
+# `aws_region` and `project_name` MUST match the values defined
+# in infra/bootstrap/terraform.tfvars.
+#
+# The bootstrap module is the source of truth for aws_region and project_name
+# DO NOT CHANGE them here unless you also change them in bootstrap!
+
+# This file is for committed, non-sensitive environment configuration.
+# Put local-only or personal values (for example alarm_email) in a separate
+# uncommitted *.auto.tfvars file such as local.auto.tfvars.
+
+aws_region      = "us-east-1"
+project_name    = "ecs-fargate-platform"
+vpc_cidr        = "10.10.0.0/16"
+environment     = "dev"
+container_port  = 8080

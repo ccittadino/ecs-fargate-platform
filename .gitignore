@@ -1,0 +1,37 @@
+# Local .terraform directories
+.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Blanket exclusion of tfvars files, 
+# which may contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Include example tfvars and specific tfvars files containing non-sensitive data.
+!infra/envs/dev/terraform.tfvars
+!infra/bootstrap/terraform.tfvars
+!*.tfvars.example
+
+# Ignore override files as they are usually used to override resources 
+# locally and so are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore transient lock info files created by terraform apply
+.terraform.tfstate.lock.info
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore local backend configuration containing environment-specific values
+backend.tfbackend

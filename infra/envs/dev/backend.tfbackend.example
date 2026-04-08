@@ -1,0 +1,12 @@
+# Terraform remote backend config (S3 + DynamoDB locking)
+#
+# These values must come from the *bootstrap* root module outputs
+# To retrieve them:
+#   cd infra/bootstrap
+#   terraform output
+# Then copy this file to `backend.tfbackend`
+# and replace the placeholder values below.
+
+bucket         = "replace_with_bootstrap_s3_bucket_name"
+region         = "replace_with_bootstrap_aws_region"
+dynamodb_table = "replace_with_bootstrap_dynamodb_table_name"

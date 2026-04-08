@@ -1,0 +1,6 @@
+# Example local-only auto-loaded Terraform variables.
+#
+# Copy this file to local.auto.tfvars and replace the placeholder values.
+# Do not commit local.auto.tfvars.
+
+alarm_email = "you@example.com"
