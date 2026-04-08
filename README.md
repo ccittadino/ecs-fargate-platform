@@ -109,6 +109,8 @@ Before deploying, make sure you have:
 * An AWS account and credentials with permission to create the required resources
 * A container image URI for the ECS task
 
+
+
 ---
 
 ## Deployment
@@ -171,6 +173,23 @@ alarm_email = "you@example.com"
 ### Required runtime input
 
 The ECS service requires a container image. Supply it through your environment-specific Terraform variables or local override file.
+
+---
+
+## GitHub Actions Setup
+
+The CI/CD workflows require the following GitHub repository settings.
+
+### Repository Secrets
+- `AWS_ROLE_ARN`
+- `CONTAINER_IMAGE`
+
+### Repository Variables
+- `TF_BACKEND_BUCKET`
+- `TF_BACKEND_DYNAMODB_TABLE`
+- `TF_BACKEND_REGION`
+
+The workflows use GitHub OIDC to assume the AWS role, and `CONTAINER_IMAGE` is passed to Terraform as `TF_VAR_container_image` during the plan step.
 
 ---
 
