@@ -180,6 +180,10 @@ The ECS service requires a container image. Supply it through your environment-s
 
 The CI/CD workflows require the following GitHub repository settings.
 
+Follow this guide to set up OIDC and the required IAM role.
+
+* [docs/github-oidc-manual-setup.md](docs/github-oidc-manual-setup.md)
+
 ### Repository Secrets
 - `AWS_ROLE_ARN`
 - `CONTAINER_IMAGE`
